@@ -1,0 +1,68 @@
+.button {
+  display: block;
+  margin: 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: $main-fonts;
+  font-size: 16px;
+  line-height: 24px;
+  color: $white-basic;
+  text-align: center;
+  background-color: $violet-basic;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-light;
+    border: none;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $primary-dark;
+  }
+
+  &:disabled {
+    background-color: $silver-basic;
+  }
+}
+
+.button--submit {
+  padding: 10px 14px;
+  font-size: 13px;
+
+  @media (min-width: $tablet-width) {
+    padding: 8px 4px;
+    font-size: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 10px 8px;
+  }
+}
+
+.button--reset {
+  padding: 10px 14px;
+  font-size: 14px;
+  color: $violet-basic;
+  background-color: $white-basic;
+
+  @media (min-width: $tablet-width) {
+    padding: 8px 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 10px 8px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white-basic;
+  }
+
+  &:disabled {
+    background-color: $grey-basic;
+  }
+}

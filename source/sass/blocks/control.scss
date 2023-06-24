@@ -1,0 +1,63 @@
+.control {
+  position: relative;
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.control__label {
+  font-size: 16px;
+  line-height: 24px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border: 2px solid $silver-basic;
+    border-radius: 50%;
+  }
+}
+
+.control__input:hover + .control__label::before,
+.control__input:focus + .control__label::before {
+  border-color: $primary-light;
+}
+
+.control__input:disabled + .control__label::before {
+  border-color: $grey-basic;
+}
+
+.control__input:disabled + .control__label {
+  color: $grey-basic;
+}
+
+.control__input:checked + .control__label::before {
+  border-color: $violet-basic;
+}
+
+.control__input {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  opacity: 0;
+  z-index: 2;
+}
+
+.control__input:checked + .control__label::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: $violet-basic;
+  position: absolute;
+  left: 4px;
+  top: 5px;
+}
+
+.control__input:disabled:checked + .control__label::after {
+  background-color: $primary-light;
+}

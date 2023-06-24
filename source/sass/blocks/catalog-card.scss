@@ -1,0 +1,72 @@
+.catalog-card {
+  padding: 35px 21px 20px;
+  border-radius: 4px;
+  background-color: $white-basic;
+  list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    padding: 50px 31px 29px;
+  }
+
+  &:hover {
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  }
+}
+
+.catalog-card__link {
+  color: $black-basic;
+  text-decoration: none;
+}
+
+.catalog-card__title {
+  margin: 0 0 4px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 10px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.catalog-card__description {
+  margin: 0 0 16px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 20px;
+  }
+}
+
+.catalog-card__price {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.catalog-card__picture {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 31px;
+  }
+}
+
+.catalog-card__price-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.catalog-card__button {
+  padding: 8px 20px 8px 46px;
+  font-size: 14px;
+  line-height: 20px;
+  background-image: url("../../img/icons/stack.svg#basket");
+  background-size: 20px 16px;
+  background-repeat: no-repeat;
+  background-position: left 20px center;
+}

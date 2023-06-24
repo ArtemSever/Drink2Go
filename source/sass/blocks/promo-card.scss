@@ -1,0 +1,135 @@
+.promo-card {
+  display: grid;
+  justify-items: center;
+  padding: 20px 20px 60px;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 20px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    padding: 32px 40px 73px;
+  }
+}
+
+.promo-card__subtitle {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $violet-basic;
+  text-align: center;
+  margin-bottom: 4px;
+
+  @media (min-width: $tablet-width) {
+    order: -1;
+  }
+}
+
+.promo-card__title {
+  margin: 0 0 10px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 16px;
+    font-size: 56px;
+    line-height: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
+  }
+}
+
+.promo-card__description {
+  margin: 0 0 20px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 60px;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 40px;
+    padding: 0;
+    text-align: start;
+  }
+}
+
+.promo-card__old-price {
+  display: block;
+  margin-right: 6px;
+  font-size: 16px;
+  line-height: 32px;
+  color: $violet-basic;
+}
+
+.promo-card__new-price {
+  display: block;
+  margin-right: 20px;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.promo-card__order-wrapper {
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.promo-card__image {
+  @media (min-width: $tablet-width) {
+    width: 476px;
+    height: 476px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+.promo-card__picture {
+  margin-bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+    order: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+    margin-left: 64px;
+  }
+}
+
+.promo-card__flex-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / 3;
+    grid-row: span 2;
+    align-self: center;
+    align-items: start;
+  }
+}
+
+.promo-card__button {
+  padding: 8px 20px;
+}
+

@@ -1,0 +1,27 @@
+.map {
+  position: relative;
+}
+
+.map__location {
+  width: 320px;
+  height: 420px;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    height: 480px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    height: 540px;
+  }
+}
+
+.map__picture {
+  position: absolute;
+  display: none;
+}
+
+.map__picture--nojs {
+  display: block;
+}

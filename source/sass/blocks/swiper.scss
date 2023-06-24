@@ -1,0 +1,132 @@
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 23px;
+  bottom: 0;
+  height: 100%;
+  width: 20px;
+  border: none;
+  z-index: 2;
+  color: $violet-basic;
+  background-color: transparent;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 20px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 320px;
+    width: 13px;
+    height: 13px;
+    border-top: 2px solid $violet-basic;
+    border-right: 2px solid $violet-basic;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      top: 312px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      top: 354px;
+    }
+  }
+
+  &:disabled {
+    background-color: transparent;
+
+    &::after {
+      border-color: $silver-basic;
+    }
+  }
+}
+
+.swiper-button-prev {
+  left: 0;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(to right, $white-basic 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:active {
+    background-image: linear-gradient(90deg, $violet-basic-opacity 0%, rgba(120, 89, 207, 0) 100%);
+  }
+
+  &::after {
+    left: 7px;
+    transform: rotate(226deg);
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      left: 38px;
+    }
+  }
+}
+
+.swiper-button-next {
+  right: 0;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(to left, $white-basic 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:active {
+    background-image: linear-gradient(90deg, rgba(120, 89, 207, 0) 0%, rgba(120, 89, 207, 0.25) 100%);
+  }
+
+  &::after {
+    right: 7px;
+    transform: rotate(46deg);
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      right: 38px;
+    }
+  }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets {
+  @media (max-width: ($mobile-tablet-only)) {
+    display: none;
+  }
+
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  bottom: 70px;
+}
+
+.swiper-pagination-bullet {
+  border-radius: 0;
+
+  &:hover,
+  &:focus {
+    background-color: $violet-basic-opacity;
+    border: none;
+    outline: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background-color: $white-basic;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $violet-basic;
+}

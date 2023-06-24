@@ -1,0 +1,76 @@
+.control-switch {
+  position: relative;
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.control-switch__label {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.control-switch__input {
+  width: 42px;
+  height: 24px;
+  margin: 0;
+  opacity: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.control-switch__input + .control-switch__label::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 42px;
+  height: 24px;
+  border: none;
+  border-radius: 12px;
+  background-color: $silver-basic;
+  transition: all 0.3s;
+}
+
+.control-switch__input:not(:disabled):hover + .control-switch__label::before,
+.control-switch__input:not(:disabled):focus + .control-switch__label::before {
+  border: 2px solid $primary-light;
+  background-color: $violet-basic-opacity;
+}
+
+.control-switch__input:disabled + .control-switch__label::before {
+  background-color: $grey-basic;
+}
+
+.control-switch__input:disabled:checked + .control-switch__label::before {
+  background-color: $grey-basic;
+}
+
+.control-switch__input:disabled + .control-switch__label {
+  color: $grey-basic;
+}
+
+.control-switch__input + .control-switch__label::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 2px;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 12px;
+  background-color: $white-basic;
+
+  transition: all 0.3s;
+}
+
+.control-switch__input:checked + .control-switch__label::after {
+  margin-left: 18px;
+}
+
+.control-switch__input:checked + .control-switch__label::before {
+  background-color: $violet-basic;
+}
